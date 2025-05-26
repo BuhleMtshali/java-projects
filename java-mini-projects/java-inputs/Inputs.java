@@ -1,6 +1,11 @@
-
+import java.util.Scanner;
 public class Inputs {
     public static void main(String[] args){
-        System.out.println("Hello zano");
+        Scanner input = new Scanner(System.in);
+        System.out.println("What's your name? ");
+        String name = input.nextLine();
+        System.out.println("Hello " + name);
+
+        input.close();
     }
 }
