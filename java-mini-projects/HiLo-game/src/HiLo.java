@@ -22,12 +22,23 @@ public class HiLo {
                 usernumber = input.nextInt(); //we're reading the user's inputed number
 
                 //4. adding conditionals to check if random </> the usernumber
+                if(usernumber < randomNumber)
+                    System.out.println("Ouch😩! Your guessed " + usernumber + " and the computer gave " + randomNumber + " try again!!! a lil higher this time!!");
+                else if(usernumber > randomNumber)
+                    System.out.println("Damn😔 " + usernumber + " is Higher than the computer's " + randomNumber + " let's go lower this time!!");
+                else
+                System.out.println("Wow!! you just right on the dot!!🍾🥂");
             }
 
+        System.out.print("Would you like to go another round (y/n)");  
+        input.nextLine();
+        playAgain = input.nextLine(); //reads the reply from the user whether they wannna play again or not
 
-        }
+        } while (playAgain.equalsIgnoreCase("y")); //keep looping if the reply is yes from the user
 
+        input.close(); //we need to close the scanner
 
+        System.out.println("---- Thank you playing ---");
      
     } 
 }
