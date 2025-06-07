@@ -25,7 +25,7 @@ public class Madlibs {
 
         Double finalPrice = tripPrice - savings;
 
-        System.out.println("Thank you for completing the " + schoolName + "'s Year End Trip form " + name + " " + lastName + ". You are currently " + age + " years old. The school trip is R" + tripPrice + "You currently have R" + savings + " in your savings so you're only left with R" + finalPrice + 
+        System.out.println("Thank you for completing the " + schoolName + "'s Year End Trip form " + name + " " + lastName + ". You are currently " + age + " years old. The school trip is R" + tripPrice + " You currently have R" + savings + " in your savings so you're only left with R" + finalPrice + 
         " to have the full amount for the trip. We look forwad to having you " + name + ".");
         System.out.println("------ The END -----");
        input.close(); //close the scanner object
