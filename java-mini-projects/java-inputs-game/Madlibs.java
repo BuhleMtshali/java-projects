@@ -21,7 +21,7 @@ public class Madlibs {
         System.out.print("How much have you saved so far? ");
         Double savings = input.nextDouble();
 
-        System.out.println("Thank you for completing the " + schoolName + "'s Year End Trip form " + name + " " + lastName + ". You are currently" + age + " years old. You currently have R" + savings + " in your savings. We look forwad to hhaving you " + name + ".");
+        System.out.println("Thank you for completing the " + schoolName + "'s Year End Trip form " + name + " " + lastName + ". You are currently " + age + " years old. You currently have R" + savings + " in your savings. We look forwad to hhaving you " + name + ".");
         System.out.println("------ The END -----");
        input.close(); //close the scanner object
     }
