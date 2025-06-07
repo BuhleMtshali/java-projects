@@ -8,12 +8,20 @@ public class HiLo {
 
         int userNumber = 0;
 
-        System.out.print("Guess a number between 1 and 100: ");
-        userNumber = input.nextInt();
+        while (userNumber != randomNumber) {
+            System.out.print("Guess a number between 1 and 100: "); //so baically we asking the user to input their guessed number
+            userNumber = input.nextInt();
 
-        
+            //adding the if statemets
+            if(userNumber < randomNumber)
+                System.out.println(userNumber + " is too low!!! Try again");
+            else if(userNumber > randomNumber)
+                System.out.println(userNumber + " is too high!! Try again");
+            else
+            System.out.println("Yaay!!! you guessed Right " + userNumber + " is equal to the Computer generated number " + randomNumber);
+        }
 
-
+       input.close(); 
 
     }
 }
