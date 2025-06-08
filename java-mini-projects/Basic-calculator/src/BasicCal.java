@@ -49,9 +49,9 @@ public class BasicCal {
 
         //6. this is where we check if the returned value is an interger or a doubel
         if(result == (int) result){
-            System.out.println("Result: " + (int) result);
+            System.out.println("Result⏳: " + (int) result);
         } else {
-            System.out.println("Result: " + result);
+            System.out.println("Result⏳: " + result);
         }
 
         input.close();
