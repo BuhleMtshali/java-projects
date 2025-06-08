@@ -11,14 +11,21 @@ public class Practice {
        //}
 
       //conditional rendering
-      String name = "Dirk";
-      int x = 5;
+      //String name = "Dirk";
+      //int x = 5;
 
-      if (x <= 5 && name.equals("Dirk")) {
-        System.out.println("I am Dirk");
-      } else {
-        System.out.println("There is no Dirk");
-      }
+      //if (x <= 5 && name.equals("Dirk")) {
+       // System.out.println("I am Dirk");
+      // } else {
+      //  System.out.println("There is no Dirk");
+      //}
+
+    //ARRAYS IN JAVA
+    String[] arrayOne = {"Java", "Python", "MathLab", "R Programming"}; //this is how we define an array
+
+    //1. array methods
+    int arrayLength = arrayOne.length; //finding the length of the array
+    System.out.println(arrayLength);
 
     }
 }
