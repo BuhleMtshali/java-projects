@@ -11,11 +11,11 @@ public class BasicCal {
         double num1 = input.nextDouble();
 
         //2. asking the use to choose the operator
-        System.out.println("Enter an operator (+, -, *, /): ");
+        System.out.print("Enter an operator (+, -, *, /): ");
         char operator = input.next().charAt(0);  //remember the user is returning a single charactor
         
         //3. second value
-        System.out.println("Enter yur second number: ");
+        System.out.print("Enter yur second number: ");
         double num2 = input.nextDouble();
 
         //4. results by the user
