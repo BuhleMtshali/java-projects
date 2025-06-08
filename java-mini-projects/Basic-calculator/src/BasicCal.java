@@ -15,7 +15,7 @@ public class BasicCal {
         char operator = input.next().charAt(0);  //remember the user is returning a single charactor
         
         //3. second value
-        System.out.print("Enter yur second number: ");
+        System.out.print("Enter your second number: ");
         double num2 = input.nextDouble();
 
         //4. results by the user
@@ -41,6 +41,7 @@ public class BasicCal {
                     input.close();
                     return;
                 }
+                break;
             default:
                 System.out.println("Invalid operator! ❌");
                 input.close();
