@@ -11,7 +11,7 @@ public class Atm {
 
        //3. Welcome message
        System.out.println("---- 🏧Welcome to the JavaBank 🏦 ---");
-       System.out.println("Enter your name: ");
+       System.out.print("Enter your name: ");
        String name = input.nextLine();
 
        //4. we gonna use the do-while loop
@@ -29,11 +29,11 @@ public class Atm {
         switch (choice) {
             case 1:
                 //check balance
-                System.out.println(name + " You current balance is: R" + balance);
+                System.out.println(name + " Your current balance is: R" + balance);
                 break;
             case 2:
                 //deposit
-                System.out.println("Enter the amount you want to deposit: ");
+                System.out.print("Enter the amount you want to deposit: ");
                 double deposit = input.nextDouble();
                 if (deposit > 0) {
                     balance += deposit;
@@ -44,7 +44,7 @@ public class Atm {
                 break;
             case 3:
                 //withdraw
-                System.out.println("Enter the amount you want to withdraw R: ");
+                System.out.print("Enter the amount you want to withdraw R: ");
                 double withdraw = input.nextDouble();
                 if (withdraw > 0 && withdraw <= balance) {
                     balance -= withdraw;
