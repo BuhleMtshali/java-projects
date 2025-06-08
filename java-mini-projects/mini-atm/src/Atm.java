@@ -37,7 +37,7 @@ public class Atm {
                 double deposit = input.nextDouble();
                 if (deposit > 0) {
                     balance += deposit;
-                    System.out.println(name + " You have successfully deposited R " + deposit + " and your current balance is R" + balance);
+                    System.out.println(name + " ✅You have successfully deposited R " + deposit + " and your current balance is R" + balance);
                 } else {
                     System.out.println("❌ Invalid deposit amount!");
                 }
@@ -48,7 +48,7 @@ public class Atm {
                 double withdraw = input.nextDouble();
                 if (withdraw > 0 && withdraw <= balance) {
                     balance -= withdraw;
-                    System.out.println(name + " You have successfully withdrew R" + withdraw + " and your current balance is R" + balance);
+                    System.out.println(name + " ✅You have successfully withdrew R" + withdraw + " and your current balance is R" + balance);
                 } else if (withdraw > balance) {
                     System.out.println("Insufficient funds🚫");
                 } else {
