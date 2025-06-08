@@ -18,7 +18,7 @@ public class HiLo {
             int maxAttempts = 5;   //this is the number of attempts the user can take
             
              System.out.println("---Welcome to HiLo Number Guessing Game👾---");
-             
+
             //3. we gonna a while which will keep running untill random number = userNumber
             while (usernumber != randomNumber && attempts < maxAttempts) {
                 System.out.print("Guess a number between 1 and 100: ");
@@ -33,7 +33,7 @@ public class HiLo {
                     System.out.println("Damn😔 " + usernumber + " let's go lower this time!!");
                 else
                 System.out.println("Wow!! you just right on the dot!!🍾🥂 you guessed " + usernumber + " and the number was " + randomNumber);
-            }
+            } //ends the while loop
 
             if(usernumber != randomNumber){
                 System.out.println("Oops!!🙊... You ran out of attempts");
