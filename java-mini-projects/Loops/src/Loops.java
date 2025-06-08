@@ -1,6 +1,9 @@
 public class Loops {
 
     public static void main(String[] args){
-        System.out.println("Hello loops");
+        //for loops in java
+        for(int i = 0; i < 6; i++){
+            System.out.println("Currently i is: " + i);
+        }
     }
 }
