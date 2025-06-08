@@ -14,13 +14,16 @@ public class HiLo {
 
             //2. usernumber will be the inputed number by the user 
             int usernumber = 0;
+            int attempts = 0;
+            int maxAttempts = 5;
             
              System.out.println("---Welcome to HiLo Number Guessing Game👾---");
             //3. we gonna a while which will keep running untill random number = userNumber
-            while (usernumber != randomNumber) {
+            while (usernumber != randomNumber && attempts < maxAttempts) {
                 System.out.print("Guess a number between 1 and 100: ");
                 usernumber = input.nextInt(); //we're reading the user's inputed number
                 input.nextLine(); //flush the leftover newline
+                attempts++;
 
                 //4. adding conditionals to check if random </> the usernumber
                 if(usernumber < randomNumber)
@@ -29,6 +32,11 @@ public class HiLo {
                     System.out.println("Damn😔 " + usernumber + " let's go lower this time!!");
                 else
                 System.out.println("Wow!! you just right on the dot!!🍾🥂 you guessed " + usernumber + " and the number was " + randomNumber);
+            }
+
+            if(usernumber != randomNumber){
+                System.out.println("Oops!!🙊... You ran out of attempts");
+                System.out.println("The number was " + randomNumber);
             }
 
         System.out.print("Would you like to go another round (y/n)");  
