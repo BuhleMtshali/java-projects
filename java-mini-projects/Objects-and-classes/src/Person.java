@@ -14,5 +14,16 @@ public class Person {
 
     public static void main(String[] args){
         Buhle myBuhle = new Buhle();
+        myBuhle.name = "Zano";
+        myBuhle.age = 23;
+        if (myBuhle.profession == null) {
+            myBuhle.profession = "Unemployed";
+        } else {
+            myBuhle.profession = "Software engineer";
+        }
+        myBuhle.apartment = "Flat";
+        myBuhle.rent = 8500.50;
+
+        myBuhle.intro();
     }
 }
