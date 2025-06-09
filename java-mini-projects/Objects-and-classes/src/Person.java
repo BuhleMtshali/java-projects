@@ -17,7 +17,7 @@ public class Person {
         myBuhle.name = "Zano";
         myBuhle.age = 23;
         if (myBuhle.profession == null) {
-            myBuhle.profession = "Unemployed";
+            myBuhle.profession = "Unemployed Software engineer";
         } else {
             myBuhle.profession = "Software engineer";
         }
