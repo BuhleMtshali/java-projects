@@ -16,5 +16,10 @@ public class Dog { //tester class which runs the show
         myPuppy.age = 2;
 
         myPuppy.bark();
+
+        Puppy myPuppyTwo = new Puppy();
+        myPuppyTwo.name = "Danger";
+        myPuppyTwo.age = 1;
+        myPuppyTwo.bark();
     }
 }
