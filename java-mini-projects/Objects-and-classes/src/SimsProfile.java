@@ -8,13 +8,21 @@ class Sim{
 
     //method
     void profile(){
-        System.out.println("This is the your Sim Profile: " + name + ", they are currently " + age + " years old. The sim will have " + hairColor + " hair color, they're gonna be " + height + "cm in height and they're currently dating " + boyfriend);
+        System.out.println("This is your Sim Profile: " + "Their name is " + name + ", they are currently " + age + " years old. The sim will have " + hairColor + " hair color, they're gonna be " + height + "cm in height and they're currently dating " + boyfriend);
     }
 }
 
 
 public class SimsProfile {
     public static void main(String[] args){
-        System.out.println("Sims Tester class");
+        Sim mySim = new Sim();
+        mySim.name = "Ginger";
+        mySim.hairColor = "red";
+        mySim.height = 163.41;
+        mySim.age = 23;
+        mySim.boyfriend = "Jace";
+
+        //calling the method
+        mySim.profile();
     }
 }
