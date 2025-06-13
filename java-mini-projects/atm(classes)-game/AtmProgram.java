@@ -24,8 +24,8 @@ public class AtmProgram {
         Scanner input = new Scanner(System.in);
         String continueChoice = "yes";
 
-        //double balance = 1000.00;
-        //int choice;
+        double balance = 1000.00;
+        int choice;
 
         //welcome message
         System.out.println("--- Welcome to JavaBank🏧 ---");
@@ -63,10 +63,47 @@ public class AtmProgram {
 
             myUser.transaction();
 
-            //ask the user if they want to continue
+           
+
+            //starting a do-while loop
+            do {
+                System.out.println( myUser.name + " Please choose an option to continue with your transaction: ");
+                System.out.println("1. Check Balance💰: ");
+                System.out.println("2. Deposit💸: ");
+                System.out.println("3. Withdraw➖: ");
+                System.out.println("4. Exit❌");
+
+                choice = input.nextInt();
+
+                switch (choice) {
+                    case 1:
+                        //check balance
+                        System.out.println(myUser.name + " Your current balance is: R" + balance);
+                        
+                        break;
+                    case 2:
+                        //deposit
+                        System.out.print("Enter the Amount you want to deposit: ");
+                        double deposit = input.nextDouble();
+                        if (deposit > 0) {
+                            balance += deposit;
+                            System.out.println("✅You have successfully deposited R" + deposit + " and your balance is R" + balance);
+                        } else {
+                            System.out.println("🚫Invalid Deposit Amount");
+                        }
+
+                    default:
+                        break;
+                }
+
+            } while (choice != 4);
+
+
+
+
+             //ask the user if they want to continue
             System.out.println("Would like to change your Account (yes/no): ");
             continueChoice = input.nextLine();
-
 
         }
 
