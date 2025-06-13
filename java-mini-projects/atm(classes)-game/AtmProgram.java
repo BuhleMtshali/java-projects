@@ -20,3 +20,36 @@ class User {
     }
 
 }
+
+//tester class
+public class AtmProgram {
+
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+
+        String continueChoice = "yes";
+
+
+        //welcome Message
+        System.out.println("--- 🏧Welcome to JavaBank 🏦 ---");
+
+        while (continueChoice.equalsIgnoreCase("yes")) {
+            User myUser = new User();
+
+            //Entering the name of the user
+            System.out.println("\nEnter your name: ");
+            myUser.name = input.nextLine();
+
+            
+            
+        }
+        
+
+
+
+
+
+
+        input.close();
+    }
+}
