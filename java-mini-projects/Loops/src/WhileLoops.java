@@ -1,5 +1,13 @@
 public class WhileLoops {
     public static void main(String[] args){
-        System.out.println("While loops file");
+    
+        int i = 1;
+
+        while (i <= 5) {
+            System.out.println("in a while loop, i currently is: " + i);
+            i++;
+        }
+       
+       
     }
 }
