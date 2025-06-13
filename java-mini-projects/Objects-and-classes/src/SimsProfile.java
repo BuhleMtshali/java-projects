@@ -38,7 +38,7 @@ public class SimsProfile {
             mySim.height = input.nextDouble();
             input.nextLine(); // clear newline
 
-            System.out.print("Enter your Sim's boyfriend's name: ");
+            System.out.print("Enter your Sim's boyfriend's/girlfriend's name: ");
             mySim.boyfriend = input.nextLine();
 
             System.out.print("Enter the age of your sim: ");
