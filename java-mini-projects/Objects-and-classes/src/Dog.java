@@ -6,6 +6,10 @@ class Puppy{ //blueprint class
     void bark(){ //method returns nothing
         System.out.println("My dog's name is " + name + " and his only " + age + " years old🐕‍🦺");
     }
+
+    void play(){
+        System.out.println(name + " likes playing!");
+    }
 }
 
 public class Dog { //tester class which runs the show
@@ -21,5 +25,7 @@ public class Dog { //tester class which runs the show
         myPuppyTwo.name = "Danger";
         myPuppyTwo.age = 1;
         myPuppyTwo.bark();
+
+        myPuppyTwo.play();
     }
 }
