@@ -43,10 +43,14 @@ public class AtmProgram {
             myUser.lastName = input.nextLine();
 
 
-            System.out.print("Enter your Account Number(has to 5 digits): ");
-            myUser.accountNumber = input.nextInt();
-            input.nextLine();
-
+           do {
+                System.out.print("Enter your 5-digit Account Number: ");
+                myUser.accountNumber = input.nextInt();
+                input.nextLine();
+                if (String.valueOf(myUser.accountNumber).length() != 5) {
+                    System.out.println("❌ Account number must be 5 digits.");
+                }
+            } while (String.valueOf(myUser.accountNumber).length() != 5);
 
             System.out.print("Enter your Pin: ");
             myUser.pin = input.nextInt();
@@ -118,7 +122,7 @@ public class AtmProgram {
 
 
 
-
+            input.nextLine();
              //ask the user if they want to continue
             System.out.println("Would like to change your Account (yes/no): ");
             continueChoice = input.nextLine();
