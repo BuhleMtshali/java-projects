@@ -40,13 +40,28 @@ public class AtmProgram {
             System.out.println("\nEnter your name: ");
             myUser.name = input.nextLine();
 
+            //entering the lastname
+            System.out.println("\nEnter your last name: ");
+            myUser.lastName = input.nextLine();
+
+            //entering the account number
+            System.out.println("\nEnter your Account number(has to be 11 number): ");
+            myUser.accountNumber = input.nextInt();
+           
+            System.out.println("\nEnter your new Pin: ");
+            myUser.pin = input.nextInt();
             
+            if(myUser.pin != myUser.confirmationPin){
+                System.out.println("\nYour Pins do not match");
+            } else {
+                System.out.println("\nConfirm your PIN: ");
+                myUser.confirmationPin = input.nextInt();
+            }
+
             
+
+
         }
-        
-
-
-
 
 
 
