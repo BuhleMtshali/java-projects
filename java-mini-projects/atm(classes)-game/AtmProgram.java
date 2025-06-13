@@ -13,7 +13,7 @@ class User {
         System.out.println("Lastname: " + lastName);
         System.out.println("Account Number: " + accountNumber);
         System.out.println("Secrete Pin: " + pin);
-        System.out.println("--- Thank You💁🏼‍♀️ ---");
+        System.out.println("--- Thank You💁🏼‍♀️ Creating an Account with JavaBank ---");
     }
 }
 
@@ -35,39 +35,41 @@ public class AtmProgram {
         while (continueChoice.equalsIgnoreCase("yes")) {
             User myUser = new User();
 
-            System.out.println("Enter your name: ");
+            System.out.print("Enter your name: ");
             myUser.name = input.nextLine();
 
 
-            System.out.println("Enter your last Name: ");
+            System.out.print("Enter your last Name: ");
             myUser.lastName = input.nextLine();
 
 
-            System.out.println("Enter your Account Number(has to 5 digits): ");
+            System.out.print("Enter your Account Number(has to 5 digits): ");
             myUser.accountNumber = input.nextInt();
             input.nextLine();
 
 
-            System.out.println("Enter your Pin: ");
+            System.out.print("Enter your Pin: ");
             myUser.pin = input.nextInt();
             input.nextLine();
 
-            System.out.println("Please confirm your pin: ");
-            myUser.confirmPin = input.nextInt();
-            input.nextLine();
-
-            if(myUser.pin != myUser.confirmPin){
-                System.out.print("Your Pins have to match, please try again: ");
+            do {
+                System.out.print("Please confirm your pin: ");
                 myUser.confirmPin = input.nextInt();
-            } 
+                input.nextLine(); // consume newline
+
+                if (myUser.pin != myUser.confirmPin) {
+                    System.out.println("❌ Pins do not match! Try again.");
+                }
+            } while (myUser.pin != myUser.confirmPin);
 
             myUser.transaction();
-
-           
+            System.out.println();
+            System.out.println( myUser.name + " Please choose an option to continue with your transaction: ");
+            System.out.println();
 
             //starting a do-while loop
             do {
-                System.out.println( myUser.name + " Please choose an option to continue with your transaction: ");
+               
                 System.out.println("1. Check Balance💰: ");
                 System.out.println("2. Deposit💸: ");
                 System.out.println("3. Withdraw➖: ");
@@ -87,13 +89,29 @@ public class AtmProgram {
                         double deposit = input.nextDouble();
                         if (deposit > 0) {
                             balance += deposit;
-                            System.out.println("✅You have successfully deposited R" + deposit + " and your balance is R" + balance);
+                            System.out.println("✅ You have successfully deposited R" + deposit + " and your balance is R" + balance);
                         } else {
                             System.out.println("🚫Invalid Deposit Amount");
                         }
-
-                    default:
                         break;
+                    case 3:
+                                //withdraw
+                        System.out.print("Enter the amount you want to withdraw R: ");
+                        double withdraw = input.nextDouble();
+                        if (withdraw > 0 && withdraw <= balance) {
+                            balance -= withdraw;
+                            System.out.println(myUser.name + " ✅ You have successfully withdrew R" + withdraw + " and your current balance is R" + balance);
+                        } else if (withdraw > balance) {
+                            System.out.println("Insufficient funds🚫");
+                        } else {
+                            System.out.println("❌ Invalid withdrawal amount");
+                        }
+                        break;
+                    case 4:
+                        System.out.println("Thank you for choosing JavaBank🏧 " + myUser.name);
+                        break;
+                    default:
+                        System.out.println("Invalid choice");
                 }
 
             } while (choice != 4);
