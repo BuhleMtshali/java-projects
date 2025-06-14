@@ -8,12 +8,14 @@ class User {
     int confirmPin;
 
     void transaction(){
-        System.out.println("\n---- This is a Summary of Your Account🏧 ----");
+        System.out.println("\n=========================================================================");
+        System.out.println("\n---- This is a Summary of Your New Account with JavaBank🏧 ----");
         System.out.println("Name: " + name);
         System.out.println("Lastname: " + lastName);
         System.out.println("Account Number: " + accountNumber);
         System.out.println("Secrete Pin: " + pin);
-        System.out.println("--- Thank You💁🏼‍♀️ Creating an Account with JavaBank ---");
+        System.out.println("--- Please See below options, to continue with your transaction🔢 ---");
+        System.out.println("\n===========================================================================");
     }
 }
 
@@ -28,23 +30,23 @@ public class AtmProgram {
         int choice;
 
         //welcome message
-        System.out.println("--- Welcome to JavaBank🏧 ---");
+        System.out.println("--- 👾Welcome to JavaBank🏧 ---");
 
 
         //while loop
         while (continueChoice.equalsIgnoreCase("yes")) {
             User myUser = new User();
 
-            System.out.print("Enter your name: ");
+            System.out.print("Enter your name💁🏼‍♀️: ");
             myUser.name = input.nextLine();
 
 
-            System.out.print("Enter your last Name: ");
+            System.out.print("Enter your last Name✍🏻: ");
             myUser.lastName = input.nextLine();
 
 
            do {
-                System.out.print("Enter your 5-digit Account Number: ");
+                System.out.print("Enter your 5-digit Account Number🔢: ");
                 myUser.accountNumber = input.nextInt();
                 input.nextLine();
                 if (String.valueOf(myUser.accountNumber).length() != 5) {
@@ -52,12 +54,12 @@ public class AtmProgram {
                 }
             } while (String.valueOf(myUser.accountNumber).length() != 5);
 
-            System.out.print("Enter your Pin: ");
+            System.out.print("Enter your Pin🫆: ");
             myUser.pin = input.nextInt();
             input.nextLine();
 
             do {
-                System.out.print("Please confirm your pin: ");
+                System.out.print("Please confirm your pin🫆: ");
                 myUser.confirmPin = input.nextInt();
                 input.nextLine(); // consume newline
 
@@ -68,7 +70,7 @@ public class AtmProgram {
 
             myUser.transaction();
             System.out.println();
-            System.out.println( myUser.name + " Please choose an option to continue with your transaction: ");
+            System.out.println( myUser.name + ", please choose an option to continue with your transaction: ");
             System.out.println();
 
             //starting a do-while loop
@@ -106,7 +108,7 @@ public class AtmProgram {
                             balance -= withdraw;
                             System.out.println(myUser.name + " ✅ You have successfully withdrew R" + withdraw + " and your current balance is R" + balance);
                         } else if (withdraw > balance) {
-                            System.out.println("Insufficient funds🚫");
+                            System.out.println("Insufficient funds🚫, please try a lower amount");
                         } else {
                             System.out.println("❌ Invalid withdrawal amount");
                         }
