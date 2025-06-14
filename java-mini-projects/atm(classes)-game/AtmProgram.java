@@ -70,7 +70,7 @@ public class AtmProgram {
 
             myUser.transaction();
             System.out.println();
-            System.out.println( myUser.name + ", please choose an option to continue with your transaction: ");
+            System.out.println("----- Hi " + myUser.name + "🙋🏻‍♀️, please choose an option to continue with your transaction💵: " + " -----");
             System.out.println();
 
             //starting a do-while loop
@@ -86,7 +86,7 @@ public class AtmProgram {
                 switch (choice) {
                     case 1:
                         //check balance
-                        System.out.println(myUser.name + " Your current balance is: R" + balance);
+                        System.out.println( myUser.name + " Your current balance is: R" + balance );
                         
                         break;
                     case 2:
@@ -114,7 +114,7 @@ public class AtmProgram {
                         }
                         break;
                     case 4:
-                        System.out.println("Thank you for choosing JavaBank🏧 " + myUser.name);
+                        System.out.println("Thank you for choosing JavaBank🏧 " + myUser.name + " come again!");
                         break;
                     default:
                         System.out.println("Invalid choice");
