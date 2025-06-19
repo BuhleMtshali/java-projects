@@ -1,2 +1,6 @@
-int[] numbers = new int[5];
-numbers[0] = 10;
+public class arraysExample {
+
+    public static void main(String[] args){
+        System.out.println("Hello arrays");
+    }
+}
