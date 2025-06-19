@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 public class arraysExample {
     public static void main(String[] args){
         int[] numbers = new int[5];
@@ -14,6 +14,8 @@ public class arraysExample {
         }
         //END OF FOR LOOP EXAMPLE
 
-        
+        System.out.println("\n===Here is how we print with the Array.toString() method");
+        System.out.println("Here is the list: " + Arrays.toString(numbers));
+
     }
 }
