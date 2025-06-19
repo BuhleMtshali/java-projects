@@ -12,5 +12,8 @@ public class arraysExample {
         for (int i = 0; i < numbers.length; i++){
             System.out.println("Here is the value at index: " + i);
         }
+        //END OF FOR LOOP EXAMPLE
+
+        
     }
 }
