@@ -17,5 +17,6 @@ public class arraysExample {
         System.out.println("\n===Here is how we print with the Array.toString() method");
         System.out.println("Here is the list: " + Arrays.toString(numbers));
         System.out.println("=====This is the best way==========");
+        //This is the way to print out the list using the Array.toString()
     }
 }
