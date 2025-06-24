@@ -3,7 +3,7 @@ class Cat{
     String color;
 
     void meow(){
-        System.out.println(name + " is   " + color + " colored cat!");
+        System.out.println(name + " is my  " + color + " colored cat!");
     };
     
 }
@@ -27,7 +27,10 @@ public class CatObject {
         myCat[2].color = "red";
         myCat[3].color = "yellow";
 
-        
+        //for each loop
+        for (Cat cat : myCat){
+            cat.meow();
+        }
     }
     
 }
