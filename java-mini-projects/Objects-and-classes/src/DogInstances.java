@@ -24,6 +24,10 @@ public class DogInstances {
         String name = input.nextLine();
 
         System.out.println("Enter the age of your dog: ");
+        int age = input.nextInt();
+
+        one.name = name;
+        one.age = age;
         
     }
 }
