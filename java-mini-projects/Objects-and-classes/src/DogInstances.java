@@ -17,6 +17,13 @@ class DogInstance {
 
 public class DogInstances {
     public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        DogInstance one = new DogInstance();
+
+        System.out.println("Enter the name of your dog: ");
+        String name = input.nextLine();
+
+        System.out.println("Enter the age of your dog: ");
         
     }
 }
