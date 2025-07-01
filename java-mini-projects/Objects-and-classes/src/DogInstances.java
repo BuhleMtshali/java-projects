@@ -28,6 +28,8 @@ public class DogInstances {
 
         one.name = name;
         one.age = age;
+
+        one.barkNoice();
         
     }
 }
