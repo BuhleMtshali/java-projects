@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 class Cat{
     String name;
 
@@ -11,6 +13,19 @@ class Cat{
 
 public class CatInstance {
     public static void main(String[] args){
-        System.out.println("hello");
+        Scanner input = new Scanner(System.in);
+        Cat myCat = new Cat();
+
+        System.out.print("Whats your cat's name: ");
+        String name = input.nextLine();
+
+        myCat.name = name;
+
+        myCat.meow(3);
+
+        
+
+
+        input.close();
     }
 }
