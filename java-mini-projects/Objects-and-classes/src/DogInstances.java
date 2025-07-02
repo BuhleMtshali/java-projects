@@ -3,7 +3,7 @@ class DogInstance {
     int age;
     String name;
 
-    void barkNoice(int numofbarks){
+    void barkNoice(int numofbarks){ //this is the parameter
         if (age > 5){
             System.out.println(name + " is a " + age + " year old dog, and he makes a woof woof!! noice!");
         } else if(age <= 3){
@@ -29,7 +29,7 @@ public class DogInstances {
         one.name = name;
         one.age = age;
 
-        one.barkNoice(3);
+        one.barkNoice(3); //this is the argument
         
         input.close();
     }
