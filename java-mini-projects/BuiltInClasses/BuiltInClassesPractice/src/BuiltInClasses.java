@@ -1,5 +1,7 @@
 public class BuiltInClasses {
     public static void main(String[] args) {
-        System.out.println("Hello world");
+        //1. the String Built in Class
+        String name = "Buhle";
+        System.out.println("Hi " + name + "!!");
     }
 }
