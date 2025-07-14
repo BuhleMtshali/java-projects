@@ -22,6 +22,8 @@ public class BuiltInClasses {
         String item2 = input.nextLine();
         groceries.add(item2);
         System.out.println(groceries);
+        System.out.println("Enter the third item: ");
+        String item3 = input.nextLine();
 
         input.close();
     }
